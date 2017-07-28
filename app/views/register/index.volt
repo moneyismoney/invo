@@ -32,6 +32,39 @@
         </div>
 
         <div class="control-group">
+            {{ form.label('type', ['class': 'control-label']) }}
+            <div class="controls">
+                {{ form.render('type', ['class': 'form-control']) }}
+                <p class="help-block">(required)</p>
+                <div class="alert alert-warning" id="type_alert">
+                    <strong>Warning!</strong> Please choose your desired type
+                </div>
+            </div>
+        </div>
+
+        <div class="control-group business-type">
+            {{ form.label('business_type', ['class': 'control-label']) }}
+            <div class="controls">
+                {{ form.render('business_type', ['class': 'form-control']) }}
+                <p class="help-block">(required)</p>
+                <div class="alert alert-warning" id="business_type_alert">
+                    <strong>Warning!</strong> Please choose your desired business_type
+                </div>
+            </div>
+        </div>
+
+        <div class="control-group number-invoices">
+            {{ form.label('number_of_invoices', ['class': 'control-label']) }}
+            <div class="controls">
+                {{ form.render('number_of_invoices', ['class': 'form-control']) }}
+                <p class="help-block">(required)</p>
+                <div class="alert alert-warning" id="number_of_invoices_alert">
+                    <strong>Warning!</strong> Please input number of invoices
+                </div>
+            </div>
+        </div>
+
+        <div class="control-group">
             {{ form.label('email', ['class': 'control-label']) }}
             <div class="controls">
                 {{ form.render('email', ['class': 'form-control']) }}

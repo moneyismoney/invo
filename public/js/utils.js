@@ -55,7 +55,27 @@ var SignUp = {
     }
 }
 
+$("#type").change(function() {
+    var value = $(this).val();
+    if (value == 2){
+        $("#registerForm .business-type").show();
+        $("#registerForm .number-invoices").hide();
+    }
+    else if(value == 3){
+        $("#registerForm .number-invoices").show();
+        $("#registerForm .business-type").hide();
+    }
+    else {
+        $("#registerForm .number-invoices").hide();
+        $("#registerForm .business-type").hide();
+    }
+});
+
+
 $(document).ready(function () {
+//    alert ('test alert333!');
     $("#registerForm .alert").hide();
     $("div.profile .alert").hide();
+    $("#registerForm .number-invoices").hide();
+    $("#registerForm .business-type").hide();
 });
