@@ -59,22 +59,22 @@ class RegisterForm extends Form
         $business_type = new Text('business_type');
         $business_type->setLabel('Business type');
         $business_type->setFilters(array('alpha'));
-        $business_type->addValidators(array(
-            new PresenceOf(array(
-                'message' => 'Please choose users business business_type'
-            ))
-        ));
+//        $business_type->addValidators(array(
+//            new PresenceOf(array(
+//                'message' => 'Please choose users business business_type'
+//            ))
+//        ));
         $this->add($business_type);
         
         // Number of invoices
         $number_of_invoices = new Text('number_of_invoices');
         $number_of_invoices->setLabel('Number of invoices');
-        $number_of_invoices->setFilters(array('alpha'));
-        $number_of_invoices->addValidators(array(
-            new PresenceOf(array(
-                'message' => 'Please enter number of invoices (1-50)'
-            ))
-        ));
+        //$number_of_invoices->setFilters(array('alpha'));
+//        $number_of_invoices->addValidators(array(
+//            new PresenceOf(array(
+//                'message' => 'Please enter number of invoices (1-50)'
+//            ))
+//        ));
         $this->add($number_of_invoices);
 
         // Email
