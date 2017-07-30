@@ -33,18 +33,7 @@ class RegisterForm extends Form
             ))
         ));
         $this->add($name);
-        
-         ////Type
-//        $type = new Text('type');
-//        $type->setLabel('Type');
-//        $type->setFilters(array('alpha'));
-//        $type->addValidators(array(
-//            new PresenceOf(array(
-//                'message' => 'Please choose users type'
-//            ))
-//        ));
-//        $this->add($type);
-        
+                
         $type = new Select('type', BusinessTypes::find(), array(
             'using'      => array('id', 'type'),
             'useEmpty'   => FALSE,
@@ -59,22 +48,13 @@ class RegisterForm extends Form
         $business_type = new Text('business_type');
         $business_type->setLabel('Business type');
         $business_type->setFilters(array('alpha'));
-//        $business_type->addValidators(array(
-//            new PresenceOf(array(
-//                'message' => 'Please choose users business business_type'
-//            ))
-//        ));
+
         $this->add($business_type);
         
         // Number of invoices
         $number_of_invoices = new Text('number_of_invoices');
         $number_of_invoices->setLabel('Number of invoices');
-        //$number_of_invoices->setFilters(array('alpha'));
-//        $number_of_invoices->addValidators(array(
-//            new PresenceOf(array(
-//                'message' => 'Please enter number of invoices (1-50)'
-//            ))
-//        ));
+
         $this->add($number_of_invoices);
 
         // Email

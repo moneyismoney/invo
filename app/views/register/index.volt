@@ -59,7 +59,7 @@
                 {{ form.render('number_of_invoices', ['class': 'form-control']) }}
                 <p class="help-block">(required)</p>
                 <div class="alert alert-warning" id="number_of_invoices_alert">
-                    <strong>Warning!</strong> Please input number of invoices
+                    <strong>Warning!</strong> Please input correct number of invoices (between 1 and 50)
                 </div>
             </div>
         </div>

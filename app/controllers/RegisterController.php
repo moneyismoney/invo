@@ -44,14 +44,6 @@ class RegisterController extends ControllerBase
                 $business_type = '';            
             }
             
-//            if ($type == 2 and strlen($business_type) === 0){
-//                $this->flash->error('Business type should not be empty');
-//                return false;
-//            }
-//            
-//            echo "Type = ".$type;
-//            echo "Length of b_t = ". strlen($business_type);
-
             $user = new Users();
             $user->username = $username;
             $user->password = sha1($password);

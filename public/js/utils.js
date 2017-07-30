@@ -45,6 +45,23 @@ var SignUp = {
         if (SignUp.check("password") == false) {
             return false;
         }
+        if ($("#type")[0].value == 2 && SignUp.check("business_type") == false) {
+            return false;
+        }
+
+        if ($("#type")[0].value == 3 && !$.isNumeric( $("#number_of_invoices")[0].value )) {
+            $("#number_of_invoices")[0].focus();
+            $("#number_of_invoices_alert").show();
+            
+            return false;
+        }
+        else if ($("#type")[0].value == 3 && ($("#number_of_invoices")[0].value < 0 || $("#number_of_invoices")[0].value > 50) ) {
+            $("#number_of_invoices")[0].focus();
+            $("#number_of_invoices_alert").show();
+            
+            return false;
+            
+        }
         if ($("#password")[0].value != $("#repeatPassword")[0].value) {
             $("#repeatPassword")[0].focus();
             $("#repeatPassword_alert").show();
@@ -76,6 +93,14 @@ $(document).ready(function () {
 //    alert ('test alert333!');
     $("#registerForm .alert").hide();
     $("div.profile .alert").hide();
-    $("#registerForm .number-invoices").hide();
-    $("#registerForm .business-type").hide();
+    
+    if ($("#type")[0].value == 3) {   
+        $("#registerForm .number-invoices").show();
+        $("#registerForm .business-type").hide();
+    }
+    else if ($("#type")[0].value == 2){
+        $("#registerForm .number-invoices").hide();
+        $("#registerForm .business-type").show();
+        
+    }                
 });
