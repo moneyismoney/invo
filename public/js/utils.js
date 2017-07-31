@@ -90,7 +90,6 @@ $("#type").change(function() {
 
 
 $(document).ready(function () {
-//    alert ('test alert333!');
     $("#registerForm .alert").hide();
     $("div.profile .alert").hide();
     
@@ -100,7 +99,10 @@ $(document).ready(function () {
     }
     else if ($("#type")[0].value == 2){
         $("#registerForm .number-invoices").hide();
-        $("#registerForm .business-type").show();
-        
-    }                
+        $("#registerForm .business-type").show();        
+    }
+    else if ($("#type")[0].value == 1){
+        $("#registerForm .number-invoices").hide();
+        $("#registerForm .business-type").hide();        
+    }    
 });
